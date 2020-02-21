@@ -26,8 +26,8 @@ html {
   display:grid;
   grid-template-columns: 200px 200px;
   grid-row: auto auto;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
 }
 
 .simon-container .simon-button {
@@ -43,16 +43,24 @@ html {
 
 .simon-button.green {
   background-color: #21BA45;
+  border-top-left-radius: 200px;
 }
 
 .simon-button.red {
   background-color: #DB2828;
+  border-top-right-radius: 200px;
 }
 
 .simon-button.yellow {
   background-color: #FBBD08;
+  border-bottom-left-radius: 200px;
 }
 
 .simon-button.blue {
   background-color: #2185D0;
+  border-bottom-right-radius: 200px;
+}
+
+.clicked {
+  transform: scale(1.1);
 }
