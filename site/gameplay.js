@@ -3,11 +3,13 @@ let simonConsole = new Console();
 let player = new ConsoleUser('name', simonConsole);
 player.beginGame();
 
+// Listen for clicks
 $('.simon-button.green').on('click', () => player.clickButton('green'));
 $('.simon-button.blue').on('click', () => player.clickButton('blue'));
 $('.simon-button.yellow').on('click', () => player.clickButton('yellow'));
 $('.simon-button.red').on('click', () => player.clickButton('red'));
 
+// Listen for keyboard input : t,y,g,h
 document.addEventListener('keypress', (event) => {
   let keyName = event.key;
   if (keyName === 't') {

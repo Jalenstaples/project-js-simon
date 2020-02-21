@@ -44,8 +44,10 @@ class Console {
             button.click();
           }
         }
+        console.log('Milliseconds in computer sequence play:');
+        console.log(600 * (0.99) ** this.gameSequence.length - 1);
         doSetTimeout(i + 1);
-      }, 600);
+      }, 600 * (0.99) ** (this.gameSequence.length - 1)); // This should make the rounds "faster" as you go along
     };
     doSetTimeout(0);
 
