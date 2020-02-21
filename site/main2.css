@@ -59,22 +59,10 @@ border-top-left-radius: 200px;
   background-color: darkblue;
   border-bottom-right-radius: 200px;
 }
-.simon-button.green:hover{
-  background-color: lightgreen;
+.simon-button:hover{
   transform: scale(1.1);
 }
-.simon-button.red:hover{
-  background-color: red;
-  transform: scale(1.1);
-}
-.simon-button.yellow:hover {
-  background-color: yellow;
-  transform: scale(1.1);
-}
-.simon-button.blue:hover{
-  background-color: blue;
-  transform: scale(1.1);
-}
+
 button{
 color: white;
 font-size: 100px;
@@ -95,4 +83,23 @@ text-align: center;
 #start-button:hover {
   transform: scale(1.1);
   border-color: yellow;
+}
+
+.simon-button.green.clicked {
+  background-color: lightgreen;
+  transform: scale(1.1);
+}
+.simon-button.red.clicked {
+  background-color: red;
+  transform: scale(1.1);
+}
+
+.simon-button.blue.clicked {
+  background-color: blue;
+  transform: scale(1.1);
+}
+
+.simon-button.yellow.clicked {
+  background-color: yellow;
+  transform: scale(1.1);
 }
