@@ -20,8 +20,15 @@ class Console {
   }
 
   startNewGame() {
-    this.nextRound();
+    //let startRound = new Audio("http://soundbible.com/grab.php?id=56&type=mp3");
+    let startRound = new Audio("http://www.therapboard.com/audio/takeoff_takeoff.mp3");
+    startRound.play();
+    this.roundsPassed = 0;
+    setTimeout(() => {
+      this.nextRound();
+    }, 1000);
     this.updateRoundCount();
+
   }
 
   nextRound() {
@@ -86,7 +93,11 @@ class Console {
         this.roundsPassed++;
         this.updateRoundCount();
         this.userSequence = [];
-        this.nextRound();
+        let Khaled = new Audio("http://www.therapboard.com/audio/khaled-anotherone.mp3");
+        setTimeout(() => {
+          Khaled.play();
+        }, 750);
+        setTimeout(() => this.nextRound(), 250);
       } else {
         this.endGame();
       }
@@ -98,10 +109,15 @@ class Console {
   }
 
   endGame() {
-    this.roundsPassed = 0;
     this.gameSequence = [];
-    setTimeout(() => alert('You\'ve lost the game!'), 650);
+    let endSound = new Audio("http://www.therapboard.com/audio/gucci_8.mp3");
+    setTimeout(() => {
+      endSound.play();
+      alert(`You\'ve lost the game! Your score was ${this.roundsPassed}`);
+    }, 750);
     this.updateRoundCount();
+    this.userSequence = [];
+
     // Play End game sound
   }
 }
