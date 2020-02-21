@@ -1,8 +1,11 @@
 
 let simonConsole = new Console();
 let player = new ConsoleUser('name', simonConsole);
-player.beginGame();
 
+// Listen for Start Button
+document.getElementById("start-button").onclick = () => {
+  player.beginGame();
+};
 // Listen for color button clicks
 $('.simon-button.green').on('click', () => player.clickButton('green'));
 $('.simon-button.blue').on('click', () => player.clickButton('blue'));

@@ -21,6 +21,7 @@ class Console {
 
   startNewGame() {
     this.nextRound();
+    this.updateRoundCount();
   }
 
   nextRound() {
@@ -83,6 +84,7 @@ class Console {
     if (this.userSequence.length === this.gameSequence.length) {
       if (this.moveCorrect()) {
         this.roundsPassed++;
+        this.updateRoundCount();
         this.userSequence = [];
         this.nextRound();
       } else {
@@ -92,13 +94,14 @@ class Console {
   }
 
   updateRoundCount() {
-    $('.roundcounter.roundcount').text(`${this.roundsPassed}`);
+    $('.roundcounter .roundcount').text(`${this.roundsPassed}`);
   }
 
   endGame() {
     this.roundsPassed = 0;
     this.gameSequence = [];
     setTimeout(() => alert('You\'ve lost the game!'), 650);
+    this.updateRoundCount();
     // Play End game sound
   }
 }
