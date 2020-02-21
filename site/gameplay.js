@@ -3,7 +3,7 @@ let simonConsole = new Console();
 let player = new ConsoleUser('name', simonConsole);
 player.beginGame();
 
-// Listen for clicks
+// Listen for color button clicks
 $('.simon-button.green').on('click', () => player.clickButton('green'));
 $('.simon-button.blue').on('click', () => player.clickButton('blue'));
 $('.simon-button.yellow').on('click', () => player.clickButton('yellow'));
