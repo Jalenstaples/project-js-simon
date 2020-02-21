@@ -32,8 +32,8 @@ html {
   display:grid;
   grid-template-columns: 200px 200px;
   grid-row: auto auto;
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
 }
 
 .simon-container .simon-button {
@@ -41,58 +41,25 @@ html {
 }
 
 .simon-button.green {
-  background-color: darkgreen;
-border-top-left-radius: 200px;
+  background-color: #21BA45;
+  border-top-left-radius: 200px;
 }
 
 .simon-button.red {
-  background-color: darkred;
+  background-color: #DB2828;
   border-top-right-radius: 200px;
 }
 
 .simon-button.yellow {
-  background-color: gold;
+  background-color: #FBBD08;
   border-bottom-left-radius: 200px;
 }
 
-.simon-button.blue{
-  background-color: darkblue;
+.simon-button.blue {
+  background-color: #2185D0;
   border-bottom-right-radius: 200px;
 }
-.simon-button.green:hover{
-  background-color: lightgreen;
-  transform: scale(1.1);
-}
-.simon-button.red:hover{
-  background-color: red;
-  transform: scale(1.1);
-}
-.simon-button.yellow:hover {
-  background-color: yellow;
-  transform: scale(1.1);
-}
-.simon-button.blue:hover{
-  background-color: blue;
-  transform: scale(1.1);
-}
-button{
-color: white;
-font-size: 100px;
-text-align: center;
-}
 
-#start-button {
-  background-color:black;
-  margin-left:auto;
-  margin-right:auto;
-  display:block;
-  margin-top:0;
-  margin-bottom:0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  border-radius: 70% !important;
-  font-size: 45px;
-}
-#start-button:hover {
+.clicked {
   transform: scale(1.1);
-  border-color: yellow;
 }
